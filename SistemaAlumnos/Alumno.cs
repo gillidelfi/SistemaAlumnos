@@ -39,4 +39,12 @@ public class Alumno
             Nota2 = 10;
         }
     }
+
+    public override string ToString()
+    {
+        return $" {Legajo} -  {Nombre} - {Promedio()}";
+    }
+    /* mensaje al sacar override: Warning CS0114 : 'Alumno.ToString()' oculta el miembro heredado 'object.ToString()'. Para hacer que el miembro actual invalide esa implementación, agregue la palabra clave override. Si no, agregue la palabra clave new.
+       SistemaAlumnos -> /Users/delfinagilli/RiderProjects/SistemaAlumnos/SistemaAlumnos/bin/Debug/net10.0/SistemaAlumnos.dll
+       0>------- Finished building project: SistemaAlumnos. Succeeded: True. Errors: 0. Warnings: 1*/
 }

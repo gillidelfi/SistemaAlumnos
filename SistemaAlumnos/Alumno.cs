@@ -1,15 +1,13 @@
 namespace SistemaAlumnos;
 
-public class Alumno
-{
-    public string Nombre { get; set; }
+public class Alumno : Persona
+{ 
     public int Legajo { get; private set; }
     public decimal Nota1 { get; private set; }
     public decimal Nota2 { get; private set; }
 
-    public Alumno(string nombre, int legajo) //metodo constructor 
+    public Alumno(string nombre, int documento, int legajo) : base( nombre,documento) //metodo constructor 
     {
-        Nombre = nombre; 
         Legajo = legajo;
     }
 

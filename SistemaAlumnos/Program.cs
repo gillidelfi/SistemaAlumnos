@@ -1,8 +1,8 @@
 ﻿using SistemaAlumnos;
 
-Alumno alumno1 = new Alumno("Sara",22);
+Alumno alumno1 = new Alumno("Sara", 47765376, 22);
 
-Alumno alumno2 = new Alumno("Bautista", 24);
+Alumno alumno2 = new Alumno("Bautista", 48798209, 24);
 
 Console.WriteLine($"{alumno1.Nombre} --- {alumno1.Legajo}");
 Console.WriteLine($"{alumno2.Nombre} --- {alumno2.Legajo}");
@@ -25,7 +25,7 @@ Console.WriteLine($"{alumno2.Nombre} - Promedio: { alumno2.Promedio()} - Aprobad
 alumno2.SubirNota();
 Console.WriteLine($"Después de SubirNota : {alumno2.Nombre} - Nota1: {alumno2.Nota1} - Nota2: {alumno2.Nota2} - Promedio: {alumno2.Promedio()} - Aprobado: {alumno2.EstaAprobado()}");
 
-Alumno alumnoTope = new Alumno("Sofía", 103);
+Alumno alumnoTope = new Alumno("Sofía", 47639854, 103);
 alumnoTope.SubirNota();
 Console.WriteLine($"{alumnoTope.Nombre} - Nota1: {alumnoTope.Nota1} - Nota2: {alumnoTope.Nota2}");
 
@@ -95,6 +95,9 @@ void AgregarAlumno(List<Alumno> lista)
 {
     Console.Write("Nombre: ");
     string nombre = Console.ReadLine();
+    
+    Console.Write("Documento: ");
+    int documento = int.Parse(Console.ReadLine());
 
     Console.Write("Legajo: ");
     int legajo = int.Parse(Console.ReadLine());
@@ -105,7 +108,7 @@ void AgregarAlumno(List<Alumno> lista)
     Console.Write("Nota 2: ");
     decimal nota2 = decimal.Parse(Console.ReadLine());
     
-    Alumno nuevo = new Alumno(nombre, legajo);
+    Alumno nuevo = new Alumno(nombre, documento, legajo);
     lista.Add(nuevo);
     Console.WriteLine("Alumno agregado.");
     
@@ -185,3 +188,6 @@ void CantidadAprobados(List<Alumno> lista)
 }
 
 
+//prueba profesor: 
+Profesor profesor1 = new Profesor("Marta Ruiz", 25873492, "historia");
+Console.WriteLine(profesor1.ToString()); 

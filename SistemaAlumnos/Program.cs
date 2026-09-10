@@ -191,3 +191,17 @@ void CantidadAprobados(List<Alumno> lista)
 //prueba profesor: 
 Profesor profesor1 = new Profesor("Marta Ruiz", 25873492, "historia");
 Console.WriteLine(profesor1.ToString()); 
+
+Preceptor preceptor1 = new Preceptor("Julio Gómez", 30111222, "tarde");
+
+List<Persona> personas = new List<Persona>();
+personas.Add(alumno1);
+personas.Add(alumno2);
+personas.Add(profesor1);
+personas.Add(preceptor1);
+
+
+foreach (Persona persona in personas)
+{
+    Console.WriteLine(persona.Presentarse());
+}

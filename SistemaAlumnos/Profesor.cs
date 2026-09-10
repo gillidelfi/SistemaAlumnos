@@ -13,4 +13,8 @@ public class Profesor : Persona
         return $"{Nombre} (Doc. {Documento}) - Materia: {Materia}";
     }
 
+    public override string Presentarse()
+    {
+        return $"Hola, soy {Nombre} y dicto {Materia}";
+    }
 }

@@ -52,7 +52,13 @@ public class Alumno : Persona
         Nota2 = nota2;
         return true; // si se encuentran, las asigna y devuelve true 
     }
+
+    public override string Presentarse()
+    {
+        return$"Hola, soy {Nombre} , alumno con legajo {Legajo}";
     }
+}
+
     /* mensaje al sacar override: Warning CS0114 : 'Alumno.ToString()' oculta el miembro heredado 'object.ToString()'. Para hacer que el miembro actual invalide esa implementación, agregue la palabra clave override. Si no, agregue la palabra clave new.
        SistemaAlumnos -> /Users/delfinagilli/RiderProjects/SistemaAlumnos/SistemaAlumnos/bin/Debug/net10.0/SistemaAlumnos.dll
        0>------- Finished building project: SistemaAlumnos. Succeeded: True. Errors: 0. Warnings: 1*/

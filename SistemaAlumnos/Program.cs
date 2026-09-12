@@ -205,3 +205,18 @@ foreach (Persona persona in personas)
 {
     Console.WriteLine(persona.Presentarse());
 }
+
+Materia materia1 = new Materia("MAT1", "Matemática I", 8);
+Materia materia2 = new Materia("HIST2", "Historia 2", 6);
+
+List<IExportable> exportables = new List<IExportable>();
+exportables.Add(alumno1);
+exportables.Add(alumno2);
+exportables.Add(profesor1);
+exportables.Add(materia1);
+exportables.Add(materia2);
+
+foreach (IExportable item in exportables)
+{
+    Console.WriteLine(item.ExportarLinea());
+}
